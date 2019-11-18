@@ -1,0 +1,120 @@
+/* Parte General del css */
+body {
+	background-color: ghostwhite;
+}
+header{
+
+	background-color: #95E9C3 ;
+	height: 100px;
+}
+nav{
+
+	background-color: gray;
+
+}
+
+section{
+	background-color: silver;
+	float: left;
+	width:  50%;
+	height: 450%;
+
+
+
+}
+
+
+
+/* */
+#login{
+	float: center;
+}
+input[type="submit"]{
+	width: 90%;
+	margin-top: 50px;
+}
+.modal-close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	margin: 0;
+	padding: 0;
+}
+#Register{
+	float: left;
+	color-adjust: #67ecac;
+
+}
+#logo{
+	padding-left:20%;
+}
+/* opciones de la barra culera que no pude sacar */
+
+
+
+/* ############# Slider ############ */
+#Slider{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#ProductosIndex{
+	background-color: transparent;
+	margin:auto;
+	width: 990px;
+	height: auto;
+	border: 1px solid black;
+	box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 5);
+}
+
+
+
+
+
+/* Footer */
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+
+
+/*Cartas son las tarjetas donde se muestran nuestros queridos y hermosos hoteles maravillosos preciosos para la gente pobre y comun*/
+.card {	
+	padding-top: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 250px;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+}
+
+.price {
+	color: grey;
+	font-size: 22px;
+}
+
+.card button {
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: white;
+	background-color: indigo;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+}
+
+.card button:hover {
+	opacity: 0.7;
+}
+
+.page-footer{
+	background: gray;
+	margin-top: 20px;
+}

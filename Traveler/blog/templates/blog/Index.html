@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<title>Traveler</title>
+<head>
+	
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+            
+		
+	<link rel="stylesheet"  href="{ % static 'css/estilo.css' %}">
+	<!-- <link rel="stylesheet"  href="{ % static 'css/materialize.css' %}">
+	<link rel="stylesheet"  href="{ % static 'css/materialize.min.css' %}"> -->
+
+	<style>
+		/*a.btn{
+	            margin-top: 30%;
+	        }*/
+		input[type="submit"] {
+			width: 90%;
+			margin-top: 50px;
+		}
+	
+		.modal-close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<!--ENCABEZADO INICIAL DE DEL SITIO PRINCIPAL -->
+	<header >
+		<form>
+			<div class="row">
+				<div class = "input-field col s2">
+					<div id="logo">
+						<img src="{% static '/img/logo.png' %}" width="120" height="70">
+					</div>
+				</div>
+
+				<div class = "input-field col s6">
+				</div>
+
+				<!-- |||||||||||||||boton Login |||||||||||-->
+				<div class ="input-field col s2">
+					<div class="container center">
+						<a href="#login" class="btn teal modal-trigger">Iniciar sesión</a>
+					</div>
+				</div>
+
+				<div class="modal" id="login">
+					<h5 class="modal-close">&#10005;</h5>
+
+					<div class="modal-content center">
+						<h4>Iniciar sesión</h4><br>
+						<form action="#">
+
+							<div class="input-field">
+								<i class="material-icons prefix">person</i>
+								<input type="text" pattern="[A-Za-z]+" id="nombreUsuario" required>
+								<label for="nombreUsuario">Nombre usuario</label>
+							</div><br>
+
+							<div class="input-field">
+								<i class="material-icons prefix">lock</i>
+								<input type="password" id="contraseña" minlength="8" maxlength="20"required>
+								<label for="contraseña">Contraseña</label>	
+							</div>
+
+							<div class="input-field col s1">
+								<label>
+									<input type="checkbox" id="check">
+									<span>Recordar contraseña</span>
+								</label>
+							</div>
+
+							<div class="input-field col1">
+							<span>¿No tienes una cuenta?</span>
+							<a href="RegistroUsuario.html">crear una</a>
+						</div>
+
+						<input type="submit" value="Entrar" class="btn btn-large">
+					</form>
+				</div>
+			</div>	
+			<!-- boton Registro -->
+			<div class="input-field col s2">
+				<a href="RegistroUsuario.html" class="waves-effect waves-light btn">
+				<i class="material-icons right">person</i>
+					Registrarse
+				</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+</form>
+</header><br>
+<!-- Barra de opciones  -->                         <!--barra de mierda que no pude eliminar por mucho que lo intentara :s -->
+<nav>
+	<form>
+		<div class="row">
+			<div class = "input-field col s1">
+				<div id="BInicio">
+					<a href="Index.html"> Inicio </a>
+				</div>
+			</div>
+			<div class = "input-field col s1">
+				<div id= "BRegiones">
+					<a href ="regiones"> Regiones </a>
+				</div>
+			</div>
+		</div>
+	</form>
+</nav>
+<!--#################################################SLIDER####################################################### -->
+
+<div id="Slider">
+	<div class="container section"> <!--Sirve para hacer espaciado-->
+		<div class="row"><!--Ocupamos el sistema de columnas-->
+
+			<div class="col s12"><!--Ocupamos la totalidad de columnas-->
+
+				<div class="slider">
+					<ul class="slides">
+						<!--Primer puntito-->
+						<li>
+							<img src="{% static '/img/hotelSantiago1.jpg' %}" alt=""> <!--Imagen 1-->
+							<!--Clase para centrar el texto-->
+							<div class="caption center-align">
+								<h3>Hoteles</h3>
+								<h5 class="light">Los mejores Hoteles de Chile a los mejores precios</h5>
+							</div>
+						</li>
+						<li>
+							<img src="{% static '/img/slider2.jpg' %}" alt="">
+							<!--Imagen 2-->
+							<!--Clase para centrar el texto-->
+							<div class="caption right-align">
+								<h3>Comodidad</h3>
+								<h5 class="light">Para estar en paz</h5>
+							</div>
+						</li>
+						<li>
+							<img src="{% static '/img/slider3.jpg' %}" alt="">
+							<!--Imagen 3-->
+							<!--Clase para centrar el texto-->
+							<div class="caption left-align">
+								<h3>Servicios</h3>
+								<h5 class="light">Los mejores servicios del pais</h5>
+							</div>
+						</li>
+						<li>
+							<img src="{% static '/img/slider4.jpg' %}" alt="">
+							<!--Imagen 3-->
+							<!--Clase para centrar el texto-->
+							<div class="caption right-align">
+								<h3>Calidad</h3>
+								<h5 class="light">Disfrute cada segundo</h5>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<!-- <div class="col s6">
+				Para que te quede un margen arriba y abajo
+				<div class="section">
+					<img src="boxer.jpg" alt="" class="materialboxed responsive-img">responsive-img: Me permite ajustar una imagen de acuerdo al sistema de columnas
+				</div>
+			</div>
+
+			<div class="col s6">
+				Para que te quede un margen arriba y abajo
+				<div class="section">
+
+					<img src="chopdog.jpg" alt="" class="materialboxed responsive-img"
+                    	data-caption="Esta es una imagen de un perro de raza CHOPDOG">responsive-img: Me permite ajustar una imagen de acuerdo al sistema de columnas.
+                    	data-caption: Me permite colocarle una descripción a una imagen.
+
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+    <!--########################################################## Vision y mision Quines somos ################################################## -->
+
+    <div class="parallax-container">
+    	<div class="parallax"><img src="{% static '/img/paralax1.jpg' %}"></div>
+    </div>
+    <div class="section ghostwhite">
+    	<div class="row container">
+    		<h2 class="header">¿Quiénes somos? Misión</h2>
+    		<p class="grey-text text-darken-3 lighten-3">
+    			Ofrecemos  catalogos con los mejores hoteles de Chile de excelencia, buscamos entregar un servicio que satisfaga a quienes necesiten un lugar donde relajarse
+    		</p>
+    	</div>
+    </div>
+    <div class="parallax-container">
+    	<div class="parallax"><img src="{% static '/img/paralax2.jpg' %}"></div>
+    </div>
+    <div class="section ghostwhite">
+    	<div class="row container">
+    		<h2 class="header">Visión</h2>
+    		<p class="grey-text text-darken-3 lighten-3">
+    			Ser la web lider en servicios de hoteleria en Chile
+    		</p>
+    	</div>
+    </div>
+    <!-- ##################################### div con los hoteles disponibles  ################################## -->
+    <div id="ProductosIndex">
+    	<form>
+    		<div class="row">
+    			<div class=" col s4">
+    				<div class="card">
+    					<div id="card1">
+    						<img src="{% static '/img/hotelSantiago1.jpg' %}" alt="Hotel Mandarin Oriental" style="width:100%; height:200px">
+    						<h4>Hotel Mandarin Oriental </h4>
+    						<h6>Santiago</h6>
+    						<p class="price">$100.000 - $250.000</p>
+    						<p>Moderno y lujoso alojamiento para asuntos de negocios y ejemplo de elegancia para un relajado bienestar. Ofrece un servicio de lujo y posee un diseño contemporaneo</p>
+    						<br><br><br><br>
+    						<p><button>ver</button></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<div class=" col s4">
+    				<div class="card">
+    					<div id="card3">
+    						<img src="{% static '/img/HotelPuntaArenas.jpg' %}" alt="Hotel Punta Arenas" style="width:100%; height:200px">
+    						<h4>Hotel Diego de Almagro</h4>
+    						<h6>Punta Arenas</h6>
+    						<p class="price">$63.000 - $150.000</p>
+    						<p>Hotel Diego de Almagro se caracteriza por la excelencia y calidad en la atención al viajero. Se encuentra ubicado a orillas del Estrecho de Magallanes con una privilegiada vista al mar en sus habitaciones.</p>
+    						<br><br>
+    						<p><button>ver</button></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<div class=" col s4">
+    				<div class="card">
+    					<div id="card4">
+    						<img src="{% static '/img/HotelViñaDelMar.jpg' %}" alt="Hotel del mar" style="width:100%; height:200px">
+    						<h4>Hotel del<br>
+    						mar</h4>
+    						<h6>Viña del Mar</h6>
+    						<p class="price">$120.000 - $300.000</p>
+    						<p>La elegancia y comodidad de Hotel del Mar en Enjoy Viña del Mar, lo posicionan como uno de los mejores hoteles de Chile, gracias a su inigualable ubicación en el sector más turístico de la ciudad, sus amplias y confortables habitaciones con vista al mar y servicios de gastronomía que te harán disfrutar de tu estancia.</p>
+    						<p><button>ver</button></p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="row">
+    			<div class=" col s4">
+    				<div class="card">
+    					<div id="card5">
+    						<img src="{% static '/img/HotelValparaiso.jpg' %}" alt="Hotel Sutherland " style="width:100%; height:200px">
+    						<h4>Hotel Sutherland House</h4>
+    						<h6>Valparaiso</h6>
+    						<p class="price">$90.000 - $150.000</p>
+    						<p>El Hotel Boutique Sutherland House se encuentra aledaño a la zona típica de conservación histórica de Valparaíso con un estilo arquitectónico vernáculo, en pleno Cerro Alegre. Este cerro es conocido por su valiosa tradición cultural y artística, con una gran y variada oferta de establecimientos gastronómicos, de hospedaje</p>
+    						<p><button>ver</button></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<div class=" col s4">
+    				<div class="card">
+    					<div id="card6">
+    						<img src="{% static '/img/HotelBioBio.jpg' %}" alt="Hotel Restaurant " style="width:100%; height:200px">
+    						<h4>Hotel Restaurant Valle del Bio Bio</h4>
+    						<h6>Bio Bio</h6>
+    						<p class="price">$75.000 - $105.000</p>
+    						<p>El Hotel y Restaurant Valle del Bio Bio cuenta con restaurante, bicicletas gratuitas, piscina al aire libre y centro de fitness en Santa Bárbara. Dispone de bar, jardín y terraza. El alojamiento cuenta con recepción 24 horas, servicio de enlace con el aeropuerto, servicio de habitaciones y WiFi gratuita en todas las instalaciones.</p>
+    						<p><button>ver</button></p>
+    					</div>
+    				</div>
+    			</div>
+
+
+    			<div class="col s4">
+    				<div class="card">
+    					<div id="card8">
+    						<img src="{% static '/img/HotelTarapaca.jpg' %}" alt="Hotel Punta Arenas" style="width:100%; height:200px">
+    						<h4>Gran Cavancha Hotel & Apartmentz</h4>
+    						<h6>Tarapaca</h6>
+    						<p class="price">$53.000 - $100.000</p>
+    						<p>El Gran Cavancha Hotel & Apartment, situado en Iquique, en la región de Tarapacá, cuenta con solárium y piscina al aire libre abierta todos los dias del año. Alberga un hermoso y gran restaurante. Además, se proporciona aparcamiento privado gratuito con seguridad adicional para nuestros visitantes</p>
+    						<p><button>ver</button></p>
+    					</div>
+    				</div>
+    			</div>
+    			
+    		</div>
+
+    		<div class="row">
+    			<div class="col s4">
+    				<div class="card">
+    					<div id="card7">
+    						<img src="{% static '/img/HoteMaule.jpg' %}" alt="Hotel Punta Arenas" style="width:100%; height:200px">
+    						<h4>Hotel Costa de Iloca</h4>
+    						<h6>Maule</h6>
+    						<p class="price">$35.000 - $70.000</p>
+    						<p>Precioso hotel restaurant con preciosa vista al mar, comida fresca del mar y platos de elegantes diseños, con precios de hospedaje para quien quiera ir a tirar la talla a nuestro hotelito de Iloca </p>
+    						<p><button>ver</button></p>
+    					</div>
+    				</div>
+    			</div>
+
+
+    			<div class="col s4">
+    				<div class="card">
+    					<div id="card2">
+    						<img src="{% static '/img/hotelSantiago2.jpg' %}" alt="Hotel Santiago Park Plaza" style="width:100%; height:200px" >
+    						<h4>Hotel Santiago Park Plaza</h42
+    							<h6>Santiago</h6>
+    							<p class="price">$63.000 - $150.000</p>
+    							<p>Es un establecimiento de lujo a tan solo 5 minutos a pie de la estacion de metro Los Leones. Cuenta con magnifica piscina climatizadora intterior y acistalada, saunas, salas de masaje y gimnasio </p>
+    							<p><button>ver</button></p>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</form>
+
+    	<!--######################################################### Footer ######################################################### -->
+    	<footer class="page-footer">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col l6 s12">
+    					<form>
+    						<h5 class="white-text">Contactenos</h5>
+    						<p class="grey-text text-lighten-4">Carlosdepintue@gmail.com</p>
+    						<br>
+    						<img src="https://image.flaticon.com/icons/png/128/21/21155.png" width="30px" height="30px" >
+    						CarloshDT
+    					</form>
+    				</div>
+    				<div class="col l4 offset-l2 s12">
+    					<h5 class="white-text">Developers</h5>
+    					<ul>
+    						<li><a class="grey-text text-lighten-3" href="https://www.instagram.com/carloshdtk/">Instagram</a></li>
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="footer-copyright">
+    			<div class="container">
+    				Jerson Gaete & CG. ltmd.
+    				<a class="grey-text text-lighten-4 right" href="#!">Comunicate con nosotros via Whatsapp</a>
+    			</div>
+    		</div>
+    	</footer>
+
+    	<!--######################################################### Script #########################################################-->
+    	<!--JavaScript at end of body for optimized loading-->
+    	
+
+    	<script>
+    		document.addEventListener('DOMContentLoaded', function () {
+    			/*SLIDER*/
+    			var elems = document.querySelectorAll('.slider');
+    			var instances = M.Slider.init(elems,{
+    				/*indicators:false,*//*Los indicadores se desaparecen*/
+    				height:300,/*alto imagen*/
+    				interval:2500/*Tiempo de la imagen 2,5 seg*/
+    			});
+    			/*MATERIAL BOX*/
+    			var elems = document.querySelectorAll('.materialboxed');
+    			var instances = M.Materialbox.init(elems);
+    		});
+    	</script>
+    	<script> $(document).ready(function(){
+    		$('.parallax').parallax();
+    	});
+    </script>
+    <script>
+    	$(document).ready(function () {
+    		$('.modal').modal();
+    		$('select').formSelect();
+    		$('.datepicker').datepicker();
+    	});
+    </script>
+
+    <script> /* para correr cositas lindas */
+    document.addEventListener('DOMContentLoaded', function() {
+    	var elems = document.querySelectorAll('.scrollspy');
+    	var instances = M.ScrollSpy.init(elems, options);
+    });
+
+        // Or with jQuery
+
+        $(document).ready(function(){
+        	$('.scrollspy').scrollSpy();
+        });
+    </script>
+</body>
+</html>
